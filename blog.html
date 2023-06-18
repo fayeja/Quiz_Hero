@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Get ready to Quiz and be amazed!
+                </p>
+            </div>
+            <button onclick="window.location.href='blog.html'"
+                class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+                Blog
+            </button>
+        </nav>
+    </header>
+
+    <div class="overflow-x-auto">
+        <table class="table ">
+            <!-- head -->
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Questions</th>
+                    <th>Answers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- row 1 -->
+                <tr  class="hover">
+                    <th>1</th>
+                    <td>What's the difference between .forEach(), .map(), .filter(), .find() ?</td>
+                    <td>
+                        <li>.forEach() executes code on each element of an array but does not modify the array and returns <br> undefined.</li>
+                        <li>.map() runs the same code on each element of an array and returns a new array with the modified elements.</li>
+                        <li>The function .filter() checks each element in an array to determine if it matches a set of criteria and returns <br> a new array with the elements that match.</li>
+                        <li>The function.find() checks each element in an array to see whether it matches a set of criteria and returns <br> the first matching element.</li>
+                    </td>
+                </tr>
+                <!-- row 2 -->
+                <tr class="hover">
+                    <th>2</th>
+                    <td>What's the difference between local storage,section storage ,cookies?</td>
+                    <td>
+                        <li>localStorage is a method of storing data on the computer of the client. It allows key/value pairs to be <br> saved in a web browser and stores data with no expiration date. JavaScript and HTML5 are the only ways <br> to access localStorage. However, the user can clear the browser data/cache to delete all localStorage data.</li>
+                        <li>Section storage only stores data for a single session, which means it is only saved until the browser (or tab) <br> is closed. Data is never sent to the server and can only be read on the client side.</li>
+                        <li>Cookies are generally for server-side reading (although can also be read on the client site), whereas <br> localStorage and sessionStorage are usually read on the client. Data that must be given back to the server with <br> subsequent XHR requests is saved here. Its expiration time varies depending on the kind, and the length can be <br> defined either server-side or client-side.</li>
+                    </td>
+                </tr>
+                <!-- row 3 -->
+                <tr class="hover">
+                    <th>3</th>
+                    <td>What is event loop and how does it work?</td>
+                    <td>Calling setTimeout causes the web API to execute, which adds the callback to the callback queue. The event loop <br> then removes the callback from the queue and adds it to the stack as soon as it is empty. There are several <br> activities going on at the same time here.</td>
+                </tr>
+                <tr class="hover">
+                    <th>4</th>
+                    <td>how does quizTimer() function work?</td>
+                    <td>quizTimer() is a function that sets the timer during quiz time. When a user clicks the submit button, the timer is <br> stopped(dismissed). Generally, it begins at the end of the countdown and continues until the submit button is <br> clicked. The function divides the timer into two parts: minute and second. After 1000ms, the time changes. </td>
+                </tr>
+                <tr class="hover">
+                    <th>5</th>
+                    <td>how does chooseQuiz() function work?</td>
+                    <td>chooseQuiz() is a function that takes two parameters: the quiz index number and the quiz result. Then the find <br> function  is used to compare the quiz result to the given answer of JSON file. If the answer does not match, it <br> returns the given answer, correct answer as well as some answer-related data. The quiz's serial number is <br> increased as well.If the answer is a match, the answer is also returned. Lastly, the chooseQuiz() function displays <br> the quiz answers via the displayAnswers() function.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
